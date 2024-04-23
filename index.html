@@ -1,97 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <title>Grid Food Menu</title>
-    <!--Google Font-->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <!--Stylesheet-->
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png" />
+
+    <title>Pizzaria da Nonna</title>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <div class="menu">
-        <div class="heading" >
-            <h1>DA NOSSA COZINHA</h1>
-            <h3>&mdash; CARDÁPIO &mdash; </h3>
+
+    <!-- modelos de pizza na lista e no carrinho -->
+    <div class="models">
+
+        <!-- pizza na lista -->
+        <div class="pizza-item">
+            <a href="">
+                <div class="pizza-item--img"><img src="" /></div>
+                <div class="pizza-item--add">+</div>
+            </a>
+            <div class="pizza-item--price">R$ --</div>
+            <div class="pizza-item--name">--</div>
+            <div class="pizza-item--desc">--</div>
         </div>
-        <div class="food-items">
-            <img src="burger.jpg" >
-            <div class="details">
-                <div class="details-sub">
-                    <h5>Hambúrguer Defumado</h5>
-                    <h5 class="price"> $8 </h5>
-                </div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit dolor sit amet consectetur adipisicing elit.</p>
-                <button>Adicionar ao carrinho</button>
+
+        <!-- pizza no carrinho -->
+        <div class="cart--item">
+            <img src="" />
+            <div class="cart--item-nome">--</div>
+            <div class="cart--item--qtarea">
+                <button class="cart--item-qtmenos">-</button>
+                <div class="cart--item--qt">1</div>
+                <button class="cart--item-qtmais">+</button>
             </div>
         </div>
 
-        <div class="food-items">
-            <img src="chicken.jpeg">
-            <div class="details">
-                <div class="details-sub">
-                    <h5>Frango com Mel e Alho</h5>
-                    <h5 class="price"> $15 </h5>
-                </div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit dolor sit amet consectetur adipisicing elit.</p>
-                <button>Adicionar ao carrinho</button>
-            </div>
-        </div>
-
-        <div class="food-items">
-            <img src="soup.jpeg">
-            <div class="details">
-                <div class="details-sub">
-                    <h5>Sopa Manchow</h5>
-                    <h5 class="price"> $8 </h5>
-                </div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus quibusdam facilis, magni consectetur necessitatibus.</p>
-                <button>Adicionar ao carrinho</button>
-            </div>
-        </div>
-
-        <div class="food-items">
-            <img src="Spaghetti.jpeg">
-            <div class="details">
-                <div class="details-sub">
-                    <h5>Espaguete com pesto de manjericão</h5>
-                    <h5 class="price"> $12 </h5>
-                </div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
-                <button>Adicionar ao carrinho</button>
-            </div>
-        </div>
-
-        <div class="food-items">
-            <img src="salmon.jpeg">
-            <div class="details">
-                <div class="details-sub">
-                    <h5>Salmão Assado</h5>
-                    <h5 class="price"> $15 </h5>
-                </div>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus reiciendis nam non quia! Earum eveniet quia menos nemo</p>
-                <button>Adicionar ao carrinho</button>
-            </div>
-        </div>
-
-        <div class="food-items">
-            <img src="Sandwich.jpeg">
-            <div class="details">
-                <div class="details-sub">
-                    <h5>Sanduíche de churrasco</h5>
-                    <h5 class="price">$10</h5>
-                </div>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus reiciendis nam non quia! Earum eveniet quia menos nemo</p>
-                <div class="product">
-                    <h2>Sanduíche de churrasco</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus reiciendis nam non quia! Earum eveniet quia menos nemo</p>
-                    <a class="whatsapp-button" href="https://api.whatsapp.com/send?phone=558599308749&text=Ol%C3%A1%21%20Estou%20interessado%20no%20produto%20Sandu%C3%ADche%20de%20churrasco.%0ADescri%C3%A7%C3%A3o%3A%20Delicioso%20sandu%C3%ADche%20feito%20com%20carnes%20suculentas%20e%20molho%20especial.%0A%0AImagem%3A%20http%3A%2F%2Fexample.com%2FSandwich.jpeg%0A%0APor%20favor%20me%20forneca%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20produto." target="_blank">Adicionar ao carrinho</a>
-                </div>
-            </div>
-        </div>
-        
-        
     </div>
+    <!-- /models -->
 
-    
+    <!-- .menu-openner aparecera no modo mobile -->
+    <header>
+        <h1>Pizzaria da Nonna</h1>
+        <div class="menu-openner"><span>0</span>🛒</div>
+    </header>
+    <!-- /menu-openner -->
+
+    <!-- conteudo principal -->
+    <main>
+        
+        <h2>Pizzas</h2>
+
+        <div class="pizza-area"></div>
+    </main>
+    <!-- /conteudo principal -->
+
+    <!-- aside do carrinho -->
+    <aside>
+        <div class="cart--area">
+            <div class="menu-closer">❌</div>
+            <h1>Suas Pizzas</h1>
+            <div class="cart"></div>
+            <div class="cart--details">
+                <div class="cart--totalitem subtotal">
+                    <span>Subtotal</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--totalitem desconto">
+                    <span>Desconto</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--totalitem total big">
+                    <span>Total</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--finalizar">Finalizar a compra</div>
+            </div>
+        </div>
+    </aside>
+    <!-- /aside do carrinho -->
+
+    <!-- janela modal .pizzaWindowArea -->
+    <div class="pizzaWindowArea">
+        <div class="pizzaWindowBody">
+            <div class="pizzaInfo--cancelMobileButton">Voltar</div>
+            <div class="pizzaBig">
+                <img src="" />
+            </div>
+            <div class="pizzaInfo">
+                <h1>--</h1>
+                <div class="pizzaInfo--desc">--</div>
+                <div class="pizzaInfo--sizearea">
+                    <div class="pizzaInfo--sector">Tamanho</div>
+                    <div class="pizzaInfo--sizes">
+                        <div data-key="P" class="pizzaInfo--size">PEQUENA <span>--</span></div>
+                        <div data-key="M" class="pizzaInfo--size">MÉDIA <span>--</span></div>
+                        <div data-key="G" class="pizzaInfo--size selected">GRANDE <span>--</span></div>
+                    </div>
+                </div>
+                <div class="pizzaInfo--pricearea">
+                    <div class="pizzaInfo--sector">Preço</div>
+                    <div class="pizzaInfo--price">
+                        <div class="pizzaInfo--actualPrice">R$ --</div>
+                        <div class="pizzaInfo--qtarea">
+                            <button class="pizzaInfo--qtmenos">-</button>
+                            <div class="pizzaInfo--qt">1</div>
+                            <button class="pizzaInfo--qtmais">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pizzaInfo--addButton">Adicionar ao carrinho</div>
+                <div class="pizzaInfo--cancelButton">Cancelar</div>
+            </div>
+        </div>
+    </div>
+    <!-- /janela modal .pizzaWindowArea -->
+
+    <script src="pizzas.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
